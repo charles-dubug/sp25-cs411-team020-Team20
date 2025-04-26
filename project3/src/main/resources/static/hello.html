@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World</title>
+</head>
+<body>
+<h1>Hello World</h1>
+<p id="welcomeMessage"></p>
+<button id="logoutButton">Logout</button>
+
+<script>
+  // Check if the user is logged in
+  const token = localStorage.getItem('token');
+  if (!token) {
+      alert('You need to log in first!');
+      window.location.href = '/login.html';
+  } else {
+      // Optionally verify the token with the server or decode it locally
+      document.getElementById('welcomeMessage').innerText = 'Welcome back!';
+  }
+
+  // Handle logout
+  document.getElementById('logoutButton').addEventListener('click', () => {
+      localStorage.removeItem('token'); // Clear the token
+      alert('Logged out successfully!');
+      window.location.href = '/login.html';
+  });
+</script>
+</body>
+</html>

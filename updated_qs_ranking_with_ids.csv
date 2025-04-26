@@ -1,0 +1,198 @@
+2025 Rank,Institution Name,Location,Location Full,Size,Academic Reputation,Employer Reputation,Faculty Student,Citations per Faculty,International Faculty,International Students,International Research Network,Employment Outcomes,Sustainability,QS Overall Score,School_id
+1,Massachusetts Institute of Technology,US,United States,M,100,100,100,100,99.3,86.8,96,100,99,100,6
+2,Harvard University,US,United States,L,100,100,96.3,100,74.1,69,99.6,100,84.4,96.8,1
+3,Stanford University,US,United States,L,100,100,100,99,70.3,60.8,96.8,100,81.2,96.1,5
+4,California Institute of Technology,US,United States,S,96.5,95.3,100,100,100,79.8,65.5,31,62.5,90.9,11
+5,University of Pennsylvania,US,United States,L,96.3,91.9,99.8,74,90.9,66.2,91.9,100,93,90.3,8
+6,University of California--Berkeley,US,United States,XL,100,100,23.5,98.2,91.5,61,97.2,98.4,100,90.1,21
+7,Cornell University,US,United States,L,98.3,93.1,52.7,97.5,54.2,63.4,94,97.1,72.1,87.9,14
+8,University of Chicago,US,United States,L,99.1,96.4,94.2,60.8,79,87,85.1,99.1,46.9,86.2,2
+9,Princeton University,US,United States,M,99.8,98.3,57,100,9.6,56.6,78.3,95.7,51.5,85.5,0
+10,Yale University,US,United States,L,99.9,99.9,100,38.6,91.5,63.3,93.9,98.5,92.2,85.2,3
+11,Johns Hopkins University,US,United States,L,86,62.6,100,84.2,63.7,95.8,98.7,71.5,61.9,82.1,9
+12,Columbia University,US,United States,XL,99.6,98.8,100,31.7,41.5,97,98.5,99.9,71.8,82,4
+13,University of California--Los Angeles,US,United States,XL,100,99.8,35.4,74,42.2,22.3,95.5,94.7,67.1,79.8,24
+14,New York University,US,United States,XL,96.3,98.8,90.5,28.6,30.2,98.1,92.6,98.4,95.4,79.6,35
+15,University of Michigan--Ann Arbor,US,United States,XL,97.9,92.1,80.3,47.6,65.5,39.2,95.8,94.5,62.2,79,27
+16,Northwestern University,US,United States,L,84,68,97.6,67.7,45.4,52,89.4,96.8,55.4,76,12
+17,Carnegie Mellon University,US,United States,L,69.8,80.1,40.9,98.9,33.7,99.1,79.9,61.5,24.5,72,23
+18,Duke University,US,United States,L,86,74.7,100,35.1,16.3,61,93.3,85.5,75,70.8,7
+19,University of Texas--Austin,US,United States,XL,93.5,86.6,8.1,76.7,6.1,11.7,91.7,81.7,52.1,69.5,58
+20,University of Illinois--Urbana-Champaign,US,United States,XL,83.9,75.7,6.4,77.5,14,56.3,90.4,81.7,65,68.2,46
+21,University of California--San Diego,US,United States,XL,89.3,57.8,50.8,67,54.6,44.3,95.5,21.7,44.3,67.1,45
+22,University of Washington,US,United States,XL,81.9,55.5,28.6,78.8,11,32.8,95.6,68.7,66.5,65.3,54
+23,Brown University,US,United States,M,59.9,49.6,77.7,76.4,79.9,50.9,83.2,63.6,46.6,64.7,13
+24,Pennsylvania State University--University Park,US,United States,XL,76.6,64.5,25,55.4,25.1,28,97.9,61.9,96.5,61.7,52
+25,Purdue University--West Lafayette,US,United States,XL,63.3,81.1,11.4,54.3,79.6,45.2,92.9,63.1,90.1,61.7,60
+26,Boston University,US,United States,L,61.9,69.1,38.3,41.3,34.3,88.9,86.9,77.2,65.9,58.1,38
+27,Georgia Institute of Technology,US,United States,XL,67.1,82.6,20.3,52.8,21.3,66.4,75.5,43.1,39.5,57.3,34
+28,University of Wisconsin--Madison,US,United States,XL,77.7,47.8,74.3,23.7,35.3,23.6,91.6,81.6,59.6,57.1,48
+29,University of Southern California,US,United States,XL,50.4,54.5,17.3,58,26,74.1,85.8,92.6,97.7,55.2,22
+30,University of California--Davis,US,United States,XL,63,48,23.5,52.5,72.7,51.3,90.6,22.8,76.1,54.4,44
+31,Rice University,US,United States,M,39.1,27.3,62.5,87.9,77.5,94.1,62.2,29.5,20.6,53.6,15
+32,Michigan State University,US,United States,XL,59.5,48.6,11.4,50.3,54.5,12.4,97.5,57.1,96.3,51.9,82
+33,Texas A&M University--College Station,US,United States,XL,61.2,66,4.4,64.3,21.9,12.1,92.6,44.4,39.5,51.8,75
+34,University of North Carolina--Chapel Hill,US,United States,XL,61.4,36.5,72.9,47.2,23.5,11.1,91.6,55.2,44.6,51.6,29
+35,Washington University in St. Louis,US,United States,L,36.3,12,99.7,47.7,69.5,72.4,83.6,31.9,86.7,49,18
+36,University of California--Santa Barbara,US,United States,L,52.6,21.3,7.7,97.8,75.4,17.2,71.2,7.9,28.4,48.9,37
+37,Emory University,US,United States,L,25.2,19,93.8,78.4,52.2,33.9,85.6,22.8,37,46.6,19
+38,Arizona State University--Tempe,US,United States,XL,48.6,44.1,7.4,47.1,52.1,37.2,95.7,23.6,96.3,46.2,128
+39,University of Minnesota--Twin Cities,US,United States,XL,56.8,33.1,32.4,41.9,7.7,8.7,91.7,52.5,96.5,46,72
+40,Ohio State University--Columbus,US,United States,XL,58.6,50.4,39.5,31.2,13.4,10.6,94.6,45.3,50.8,45.6,53
+41,University of Florida,US,United States,XL,46.7,42.3,62.9,32.1,17.8,10.3,98.3,44.5,60.6,44.2,50
+42,University of Maryland--College Park,US,United States,XL,48.6,29.4,32.5,55,20.9,16.2,92.3,41.2,54.4,44,63
+43,University of Rochester,US,United States,M,22.6,20.8,99.1,33.6,63.9,93.8,64.3,40.4,63.7,42.3,32
+44,Dartmouth College,US,United States,M,22.8,31,65.8,60.6,9.2,40.9,42.5,68.8,71.2,41.3,10
+45,Vanderbilt University,US,United States,L,24.4,21.8,100,53,30.1,36,78.6,34.7,24.5,40.8,17
+46,Case Western Reserve University,US,United States,M,17.2,15.4,82.3,61.6,35.7,71.7,55.6,29.3,53.1,39.7,36
+47,University of Massachusetts--Amherst,US,United States,L,38.2,17.2,10,48.8,61,25.3,79.8,30.6,83.4,38.2,76
+48,University of Pittsburgh,US,United States,L,35,12.7,96.3,31.3,9.5,13.5,91.7,42.6,53.5,38.2,68
+49,University of Arizona,US,United States,XL,37.3,22.2,44.4,38.8,31.6,15.1,94.1,37.1,40.4,37,127
+50,University of Virginia,US,United States,L,37.3,27.3,55.8,29.1,6.1,11.3,81.6,77.9,35.4,36.6,25
+51,Georgetown University,US,United States,L,29.3,41.9,63,14,28,37.3,62.5,90.9,37,36.3,20
+52,University of California--Irvine,US,United States,XL,37.5,22.3,17.3,40.7,43.9,58.7,84.1,11.2,36,35.5,42
+53,North Carolina State University--Raleigh,US,United States,XL,26.7,25.4,9.8,63.4,55,17,78.1,21.5,35.7,35.1,92
+54,University of Notre Dame,US,United States,L,25.8,25.2,60.8,29.2,22.3,18.4,70.1,60.2,68.9,34.7,16
+55,University of Colorado--Boulder,US,United States,XL,36.1,17.5,38.3,34.9,32.2,4.9,86.3,31.6,62.8,34.4,93
+56,University of Miami,US,United States,L,19,29.5,50,39.3,66.7,16.9,81.6,43.8,27.9,34.1,47
+57,Rutgers University--New Brunswick,US,United States,XL,36.2,28.1,46.3,12.8,18,28.2,78,25.7,95.4,33.8,69
+58,Tufts University,US,United States,L,16.9,7.7,53.5,45.7,23.5,38.1,60.2,56.1,81,32.9,26
+59,Indiana University--Bloomington,US,United States,XL,33.4,23.6,23.3,29.1,36.3,10.8,86.6,56.8,32.7,32.1,86
+60,University of Illinois--Chicago,US,United States,L,38.5,28.3,31.1,23.3,8,19.3,83.8,30.5,34.8,31.6,155
+61,George Washington University,US,United States,L,25.2,28.8,27.3,27.5,24.6,34.4,79.5,74.5,27.3,31.3,55
+62,Virginia Tech,US,United States,XL,26.4,26.2,18.9,28.4,71.8,16.5,82.6,24,34.8,30.1,77
+63,University of California--Santa Cruz,US,United States,L,17.7,5.9,7.4,65.3,53.4,7,64.5,6.1,83.6,29.9,79
+64,Northeastern University,US,United States,XL,19.2,11.8,15.4,24.6,51.6,96.4,67.3,44,72.3,29.7,39
+65,Yeshiva University,US,United States,S,3.1,2.8,65.3,91.6,31.4,13.5,6.6,3,15.8,28.8,66
+66,Colorado State University,US,United States,L,18.3,20.4,60.9,17.1,18.5,3.7,78.4,22.2,70.9,26.8,130
+67,University of Kansas,US,United States,L,14.4,12.6,86.7,9.2,60.3,7.2,84.6,28.2,32.4,26.4,121
+68,Stony Brook University--SUNY,US,United States,L,18,7.3,32.2,23.6,34.7,43.5,76,21.2,79.1,26.2,97
+69,University at Buffalo--SUNY,US,United States,L,18,10.7,8.8,33.6,20.1,36.9,68.6,33.3,82.5,25.7,101
+70,Washington State University,US,United States,L,23.3,20,15.5,33.5,47.1,5,77.3,8.6,29.6,25.7,144
+71,Iowa State University,US,United States,L,20.7,12,9.1,47.9,7.5,12.5,77.3,32.9,31.3,25.6,110
+72,University of Tennessee----Knoxville,US,United States,XL,10.1,8.2,9.5,76.3,4.9,2.4,77.3,11,15,25,105
+73,University of Hawaii--Manoa,US,United States,L,15.2,6.6,29.7,41.7,41.7,12,82.9,7.9,30.1,24.6,169
+74,University of California--Riverside,US,United States,L,16.3,9.4,6.6,50.9,47.9,10.4,77.3,3.7,21.3,24.2,120
+75,Colorado School of Mines,US,United States,M,6.8,12.5,15.8,72,29.7,7.4,30.9,17.7,18,24.1,81
+76,University of Delaware,US,United States,L,9.4,7.9,6.6,53.9,30,12.6,66.5,16.9,65.3,24,80
+77,Missouri University of Science & Technology,US,United States,M,4,6.1,5.7,86.2,35.2,12.8,30.5,4.8,1.7,23.2,165
+78,University of Utah,US,United States,XL,15.7,6.3,50,30.5,15.5,10.3,80.5,17.4,24.5,23.1,116
+79,University of Connecticut,US,United States,L,14.4,8.1,18.2,29.8,27.4,19.4,88,23.3,37.6,22,62
+80,Florida State University,US,United States,XL,25.6,18.1,7.2,24.8,10,4.2,71.9,18.4,26.8,21.6,91
+81,Florida International University,US,United States,XL,15.3,22.5,11.8,12.6,20.3,12.9,86.7,16.6,81.2,21.5,231
+82,University of Georgia,US,United States,XL,20.6,18.6,9.8,24.4,6.7,4.5,83.7,21.5,30.7,21.1,57
+83,University of Iowa,US,United States,L,18.4,8.7,41.7,19.1,15.5,3.7,75.6,26.6,20.8,20.8,84
+84,University of Texas--Dallas,US,United States,L,13.1,15.9,3.4,43.3,9.7,47.4,60.4,4.9,9.5,20.8,150
+85,Illinois Institute of Technology,US,United States,M,12.8,11,14.1,35.9,19.2,97.3,18.9,12.2,1.6,-,102
+86,Rensselaer Polytechnic Institute,US,United States,M,8,8.4,19.7,56.6,3.7,29.9,25,31.4,2.8,-,40
+87,University of South Carolina,US,United States,XL,13.8,9.4,9.7,28.3,30.4,3.2,71.9,17.3,63.1,-,109
+88,University of South Florida,US,United States,XL,12.9,9.5,8.8,36.3,19.9,22.2,86.7,6.1,15.9,-,162
+89,Boston College,US,United States,L,21.3,16.2,21.2,16.6,12.5,18.8,50.8,42.2,7.1,-,30
+90,Tulane University,US,United States,L,9.8,6,84.7,9.7,9.9,10.8,75.4,26,8,-,41
+91,Lehigh University,US,United States,M,5.2,4.8,24.3,32.5,47.1,27.8,44.5,29,33.3,-,43
+92,Oregon State University,US,United States,L,14.6,4.2,15.6,33.9,11.7,8.1,81.2,19.3,21.1,-,143
+93,University of Missouri----Columbia,US,United States,L,14.3,8,37.8,16.5,46.7,3.3,66.5,30.5,12.3,-,112
+94,University of Houston,US,United States,XL,12.7,11.4,5,24.6,23.9,19.8,71.6,50.3,19.7,-,194
+95,City University of New York,US,United States,XL,19.9,35.6,8.9,4.7,6.1,4.4,93.1,22,13.2,-,232
+96,Temple University,US,United States,L,12.3,7.1,29.2,16.9,3,5.7,77.2,23.2,61.9,-,119
+97,Stevens Institute of Technology,US,United States,M,2.6,4,5.2,41.7,53.2,96.4,18,7.8,1.3,-,71
+98,University of Nebraska--Lincoln,US,United States,L,10.6,5.8,16.9,30.4,21.5,7.1,73.1,7.2,33,-,113
+99,University of Oklahoma,US,United States,L,10.2,9.8,15.6,31.1,21.8,5.7,69.3,22.3,17.7,-,114
+100,American University,US,United States,M,16.2,29.3,32.9,4.3,8,19.4,30.6,40.5,4.8,-,73
+101,Brandeis University,US,United States,M,9.4,4.8,53.1,11.6,18,75.1,32.3,16.5,1.1,-,33
+102,Drexel University,US,United States,L,8.1,4.5,22.4,28.7,12.6,23.8,73.4,25.1,8.3,-,95
+103,University of Central Florida,US,United States,XL,13.7,23,2.9,23.6,9.5,4.3,72.2,9.2,12.1,-,180
+104,Wake Forest University,US,United States,M,5.1,6.3,100,8.6,3.2,10.9,42.8,15.4,1.7,-,28
+105,University of Cincinnati,US,United States,XL,11,6,19.4,22.9,4.3,12.4,69,25.3,22.5,-,140
+106,University of Colorado--Denver,US,United States,L,8.2,6.1,100,3.6,3.4,8.1,45.7,5.6,3.8,-,199
+107,University of Maryland--Baltimore County,US,United States,L,10.2,6.8,14.1,13.5,49.8,25.8,45,4.5,57.7,-,160
+108,Texas Tech University,US,United States,XL,10.9,10.6,6.2,11.3,36.6,9.6,70.5,13.7,55.4,-,179
+109,New School,US,United States,M,15.2,8.2,41.1,2.6,5.7,92.3,19.6,13.5,1,-,131
+110,New Jersey Institute of Technology,US,United States,M,4.8,6.7,10.2,30.4,31.5,52.9,29.1,5.1,26.5,-,137
+111,University of Kentucky,US,United States,L,11.1,9.8,15.3,23.5,12.9,3.3,75.4,13.9,10.1,-,133
+112,University of New Mexico,US,United States,L,10.5,8,43.5,14.9,8.2,4,73.1,7.3,11,-,181
+113,Wayne State University,US,United States,L,7.6,3.4,62.1,10.6,13.3,5.4,73.6,19.4,3.1,-,254
+114,Rutgers University--Newark,US,United States,M,10.1,4.9,17.5,17.6,25.3,32.7,27.9,36.9,29.3,-,138
+115,Syracuse University,US,United States,L,12.9,8.7,11.6,10.6,5.8,39.3,55.5,42.7,11.6,-,61
+116,University of Alaska--Fairbanks,US,United States,S,2.7,2,98.8,12.9,4.8,3,42.6,4.2,2.5,-,205
+117,University of Oregon,US,United States,L,18.3,9.4,9.4,18.5,7.6,3.6,53.4,23.3,16.1,-,104
+118,Clarkson University,US,United States,S,1.3,1.9,13.5,41.8,48.5,15,30.6,7.9,1.2,-,129
+119,Georgia State University,US,United States,L,11.3,14.2,4.3,22.4,4.8,10.4,62.3,18.2,7.2,-,255
+120,Kansas State University,US,United States,L,8.2,6.7,10.3,22.1,10.1,4.6,74.9,13.5,10.2,-,134
+121,Oklahoma State University,US,United States,L,8.3,8.1,9.2,13.3,49.9,6.1,66.8,17.3,9.4,-,153
+122,Swarthmore College,US,United States,S,3.4,2.4,88.8,11.7,8.7,21.6,12.3,15.2,1,-,256
+123,University at Albany--SUNY,US,United States,L,8.1,4.5,5.4,33.9,3.9,7.2,66,4.2,13.2,-,149
+124,University of Mississippi,US,United States,L,4.2,2,83,5.5,6.1,2.9,58,3.6,1.7,-,141
+125,Virginia Commonwealth University,US,United States,L,7.1,8.5,38.8,12.8,9.7,3.2,73.5,8.2,8.5,-,167
+126,Louisiana State University--Baton Rouge,US,United States,XL,9.5,6.7,7.8,12.9,8.6,3.8,52.3,18.8,52.8,-,135
+127,Michigan Technological University,US,United States,M,4.8,3.7,27.1,28.6,11.4,11.1,52.1,3.1,1.9,-,117
+128,University of Alabama----Birmingham,US,United States,L,5.8,4.2,56,16.8,,,54.5,1.7,2,-,103
+129,Worcester Polytechnic Institute,US,United States,M,3.5,5.2,17.4,26.2,42,23.5,25.6,8.3,1.9,-,64
+130,Auburn University,US,United States,L,7.1,7.7,7.6,17.2,27.6,6,54.7,16.4,10.9,-,98
+131,Clark University,US,United States,S,2.6,2.5,18.9,16.7,13.2,84.7,20.2,13.6,6.5,-,74
+132,Clemson University,US,United States,L,7.3,7,12.6,15.2,11.6,5.2,78.5,7.7,12.3,-,65
+133,Saint Louis University,US,United States,L,4.4,2.6,53.2,13.5,12.7,11,28.7,9,1.7,-,96
+134,University of Alabama,US,United States,XL,10,20.3,5.3,11.9,5.3,2.5,54.9,10.7,6.7,-,103
+135,University of Denver,US,United States,M,5.4,7.4,42.2,7.8,7.7,5.8,32.7,25.6,9.9,-,88
+136,Baylor University,US,United States,L,6.1,9.1,11.9,7.5,2.4,3.8,41.8,11.6,4,-,70
+137,Binghamton University--SUNY,US,United States,L,7,5.1,5.7,15.8,10.8,10.3,44.2,3.9,3.1,-,85
+138,Brigham Young University--Provo,US,United States,XL,7.5,7,4.8,10.4,1.3,3,52.4,22.2,3.8,-,67
+139,College of William & Mary,US,United States,M,8.1,9.1,20.9,11.4,6.3,5.4,33.1,23.7,4.3,-,31
+140,Fordham University,US,United States,L,6.8,8.3,14.8,5.4,6.3,13.9,23.9,29.1,1.4,-,59
+141,George Mason University,US,United States,XL,8.8,4.8,12.4,9.2,10,15.3,60.9,11.9,22.5,-,142
+142,Howard University,US,United States,M,7,9.2,38.9,3,1.1,4.1,31.9,18.8,1.1,-,126
+143,Indiana University-Purdue University--Indianapolis,US,United States,L,7.1,4.5,22.2,10,28.8,6.6,33.6,3.7,6.7,-,196
+144,Kent State University,US,United States,L,5.5,2.9,6.2,12.7,19.2,6.6,57.1,7.6,2.8,-,187
+145,Loyola University Chicago,US,United States,L,8.5,17.3,23.2,7,6.5,3,39.5,13.2,1.9,-,99
+146,Mississippi State University,US,United States,L,6.2,3.6,7.4,17.4,8.9,3.1,50.6,7.1,4.5,-,177
+147,Northern Arizona University,US,United States,L,5.8,6.2,5.1,13.1,3,3.1,55.1,4.6,6.4,-,233
+148,Ohio University,US,United States,L,8.1,5.5,5.7,10.5,2.4,3.3,41.4,16.9,2.7,-,146
+149,Rochester Institute of Technology,US,United States,L,7.2,10.7,19.2,6.3,4.7,16.1,36.8,9,34.5,-,106
+150,San Diego State University,US,United States,XL,5.4,3,3.3,14.3,5.2,3.5,68.7,15.8,9.4,-,147
+151,Southern Methodist University,US,United States,M,4.9,3.6,29.3,7.2,6.8,8.7,30.2,38.8,2.4,-,56
+152,University of Texas--Arlington,US,United States,XL,4.6,5.1,4.5,9.8,1.9,29.6,61.6,8.1,40.4,-,257
+153,University of Arkansas Fayetteville,US,United States,L,5.8,3.5,6.3,11.9,4.8,3,51.6,15.4,3.8,-,139
+154,University of Idaho,US,United States,M,3.1,1.4,9.9,32.6,4.6,5.9,32.5,3.5,3.4,-,172
+155,University of Louisville,US,United States,L,3.5,3.2,30.5,7.7,24.8,3.2,59,5.1,2.4,-,173
+156,University of Massachusetts--Boston,US,United States,L,11,7.7,9.8,19.7,4.5,14.8,32.2,2.9,8.4,-,225
+157,University of Missouri----Kansas City,US,United States,M,4.4,4.4,14.3,16.9,4.1,20,29.3,6.6,1.8,-,112
+158,University of New Hampshire,US,United States,L,5,4.1,12.2,16.9,7,2.5,41.7,7.1,5.5,-,107
+159,University of North Carolina--Charlotte,US,United States,L,5.1,5.8,5,13.4,8.7,6.2,65,7.8,4.2,-,206
+160,University of North Texas,US,United States,XL,6.9,5,3.1,17.2,3.5,24.8,58,21.1,3.8,-,234
+161,University of Rhode Island,US,United States,L,5.6,3.5,6.7,16.2,5.2,2.6,48.9,11.8,54.1,-,161
+162,University of Texas at San Antonio,US,United States,L,6,3,3.9,22.8,8.8,2.7,60.5,5.1,3.8,-,235
+163,University of Texas El Paso,US,United States,L,4.4,2.6,5.7,14.2,9,5.3,66.2,3,2.9,-,236
+164,University of Toledo,US,United States,L,3.7,3,9.6,18.2,6,10.4,45.4,7.7,1.7,-,237
+165,University of Tulsa,US,United States,S,3.2,2.1,35.1,11.5,7,17.8,20.4,13.7,1.1,-,90
+166,University of Vermont,US,United States,L,3.1,2.2,34.9,15.6,6.8,2.4,62.8,9.5,8.1,-,94
+167,University of Wyoming,US,United States,M,3.2,1.6,28.4,21.1,6.8,4,52.2,6.5,3.6,-,174
+168,Utah State University,US,United States,L,6.2,2,5.4,22.4,1.1,1.6,54.7,7.6,7.4,-,230
+169,West Virginia University,US,United States,L,5.6,4.7,12.8,18.5,5.8,4.2,66.7,14.3,6.7,-,185
+170,Central Michigan University,US,United States,L,3.6,3.4,8.2,6.5,2.4,6.9,23.4,7.7,1.2,-,202
+171,Cleveland State University,US,United States,M,4.1,3.1,9.2,4,4,26.2,16.7,7.3,1,-,238
+172,CUNY The City College of New York,US,United States,M,7.2,3,11.9,11.3,6.7,4.7,24.8,1.5,2.5,-,239
+173,Florida Atlantic University - Boca Raton,US,United States,L,4.7,6.2,4.9,9.5,6.8,4.4,44.3,5.8,4.5,-,240
+174,Marquette University,US,United States,M,3.4,2.4,21.1,9.1,6.2,2.7,35.6,11.2,1.2,-,87
+175,Miami University--Oxford,US,United States,L,3.8,5.4,6.2,7.8,3.4,5.5,25.3,26.1,2.2,-,78
+176,Portland State University,US,United States,L,4.1,1.7,9.3,9.2,1.6,6.1,44.4,9.7,6.8,-,241
+177,San Francisco State University,US,United States,L,4.5,3.1,5.7,4,3.4,5,35.6,7.6,1.7,-,242
+178,Seattle University,US,United States,M,5.4,6.4,32.2,2.1,1.5,13.2,6.3,10.1,2.4,-,243
+179,University of Memphis,US,United States,L,3.1,2.5,12.1,8,2.2,8.3,39.4,7.6,2.1,-,244
+180,University of Missouri Saint Louis,US,United States,M,4.2,4.2,12.3,10.5,3.4,3.1,9.8,7.7,1,-,112
+181,University of North Carolina--Greensboro,US,United States,L,2.6,2.4,8.9,10.1,5.9,3.4,50.7,1.5,1.6,-,228
+182,University of San Diego,US,United States,M,6.2,7,25.5,2.7,3.1,6.8,5.5,12.2,1,-,89
+183,University of San Francisco,US,United States,M,5.9,4.4,18.7,3.6,2.3,20.2,6,29.5,1.2,-,108
+184,University of South Alabama,US,United States,M,4.7,5.9,19,6.1,,2.1,13.6,2.3,1.2,-,245
+185,University of the Pacific,US,United States,M,2.2,3.5,31.9,3,3.2,12,7.6,8.1,1,-,115
+186,University of Wisconsin Milwaukee,US,United States,L,7.6,2.4,9.7,9.8,5.7,5.1,39.5,6.8,4.5,-,246
+187,Western Michigan University,US,United States,L,4.9,4.9,10,5.8,21.4,10.6,33.3,16.5,1.6,-,195
+188,California Polytechnic State University,US,United States,L,3.6,9.1,6.7,3,,,25.5,8.7,1.3,-,247
+189,California State University - Los Angeles,US,United States,L,5.2,3.3,3.8,2.9,3.6,2.3,14.9,5.5,1,-,248
+190,"California State University, Long Beach",US,United States,XL,3.7,4.1,4.8,2.9,2.6,3.4,16.4,1.7,1,-,249
+191,Humboldt State University,US,United States,M,3,2.5,9.7,3.7,2.9,1.2,9.9,3.1,1,-,250
+192,Illinois State University,US,United States,L,3.4,2.8,5.6,4.1,4.7,3.1,20,7.6,1.1,-,151
+193,Indiana State University,US,United States,M,6.2,4.4,8.5,3,1.7,2.2,4.2,6.8,1,-,251
+194,Nova Southeastern University,US,United States,L,2.7,3.5,11.6,2.8,4.7,3.9,13.2,8.9,1.2,-,216
+195,University of Central Oklahoma,US,United States,L,5.6,2.9,6.5,1.5,15.9,9.9,5.2,2.9,1,-,252
+196,University of Montana Missoula,US,United States,M,3,2.2,10.6,6.1,1.3,1.9,6.5,3.1,1,-,218
+197,Western Washington University,US,United States,L,2.6,2.6,7.3,3.5,9.7,1.6,12.4,1.5,1.1,-,253

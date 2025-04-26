@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Rankings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <style>
+        .ranking-card {
+            transition: transform 0.3s;
+        }
+        .ranking-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .top-ranked {
+            border-left: 5px solid #ffc107;
+        }
+        .filter-section {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .badge-ranking {
+            font-size: 1rem;
+            min-width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Global University Rankings</h1>
+        
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="searchInput" class="form-label">Search Universities</label>
+                        <input type="text" class="form-control" id="searchInput" placeholder="Enter university name...">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="rankFilter" class="form-label">Rank Range</label>
+                    <select class="form-select" id="rankFilter">
+                        <option value="all">All Ranks</option>
+                        <option value="top10">Top 10</option>
+                        <option value="top50">Top 50</option>
+                        <option value="top100">Top 100</option>
+                        <option value="101-200">101-200</option>
+                        <option value="201-500">201-500</option>
+                        <option value="501+">501+</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="countryFilter" class="form-label">Country</label>
+                    <select class="form-select" id="countryFilter">
+                        <option value="all">All Countries</option>
+                        <!-- Countries will be populated dynamically -->
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <label class="form-label">Ranking Systems</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="qs" id="qsCheck" checked>
+                        <label class="form-check-label" for="qsCheck">
+                            Include QS Rankings
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="usnews" id="usnewsCheck" checked>
+                        <label class="form-check-label" for="usnewsCheck">
+                            Include US News Rankings
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="sortBy" class="form-label">Sort By</label>
+                    <select class="form-select" id="sortBy">
+                        <option value="combined">Combined Score</option>
+                        <option value="qs">QS Ranking</option>
+                        <option value="usnews">US News Ranking</option>
+                        <option value="name">University Name</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="sortOrder" class="form-label">Sort Order</label>
+                    <select class="form-select" id="sortOrder">
+                        <option value="asc">Ascending (Best First)</option>
+                        <option value="desc">Descending</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="row" id="rankingResults">
+            <!-- Rankings will be loaded here -->
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="text-center my-5" id="loadingSpinner">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <!-- No Results Message -->
+        <div class="text-center my-5 d-none" id="noResults">
+            <h4>No universities match your search criteria</h4>
+            <p>Try adjusting your filters</p>
+        </div>
+    </div>
+
+    <!-- Modal for University Details -->
+    <div class="modal fade" id="universityModal" tabindex="-1" aria-labelledby="universityModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="universityModalLabel">University Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="universityDetails">
+                    <!-- Details will be loaded here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fetch and display rankings
+            fetchRankings();
+            
+            // Set up event listeners for filters
+            $('#searchInput').on('keyup', debounce(fetchRankings, 300));
+            $('#rankFilter, #countryFilter, #sortBy, #sortOrder').on('change', fetchRankings);
+            $('.form-check-input').on('change', fetchRankings);
+            
+            // Function to fetch rankings with current filters
+            function fetchRankings() {
+                $('#loadingSpinner').removeClass('d-none');
+                $('#rankingResults').empty();
+                $('#noResults').addClass('d-none');
+                
+                const filters = {
+                    search: $('#searchInput').val(),
+                    rankRange: $('#rankFilter').val(),
+                    country: $('#countryFilter').val(),
+                    includeQS: $('#qsCheck').is(':checked'),
+                    includeUSNews: $('#usnewsCheck').is(':checked'),
+                    sortBy: $('#sortBy').val(),
+                    sortOrder: $('#sortOrder').val()
+                };
+                
+
+                setTimeout(function() {
+                    // Simulate API call with your SQL query
+                    $.ajax({
+                        url: '/api/rankings',
+                        method: 'GET',
+                        data: filters,
+                        success: function(data) {
+                            displayRankings(data);
+                            populateCountryFilter(data);
+                        },
+                        error: function() {
+                            alert('Error loading rankings');
+                            $('#loadingSpinner').addClass('d-none');
+                        }
+                    });
+                    
+                    // For demo purposes, we'll use mock data
+                    // In a real app, remove this and uncomment the AJAX call above
+                    const mockData = getMockData();
+                    const filteredData = applyFilters(mockData, filters);
+                    displayRankings(filteredData);
+                    populateCountryFilter(mockData);
+                    $('#loadingSpinner').addClass('d-none');
+                }, 800);
+            }
+            
+            // Function to display rankings
+            function displayRankings(data) {
+                $('#rankingResults').empty();
+                
+                if (data.length === 0) {
+                    $('#noResults').removeClass('d-none');
+                    return;
+                }
+                
+                data.forEach((university, index) => {
+                    const rank = index + 1;
+                    const cardClass = rank <= 10 ? 'top-ranked' : '';
+                    
+                    const cardHtml = `
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100 ranking-card ${cardClass}" onclick="showUniversityDetails(${university.School_id})" style="cursor: pointer;">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <h5 class="card-title">${university.Name}</h5>
+                                        <span class="badge bg-primary badge-ranking">#${rank}</span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Combined Score:</span>
+                                            <strong>${university.Combined_Score}</strong>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Avg QS Rank:</span>
+                                            <strong>${university.Avg_QS_Rank || 'N/A'}</strong>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <span>Avg US News Rank:</span>
+                                            <strong>${university.Avg_USNews_Rank || 'N/A'}</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <small class="text-muted">Click for more details</small>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    $('#rankingResults').append(cardHtml);
+                });
+            }
+            
+            // Function to populate country filter
+            function populateCountryFilter(data) {
+                const countryFilter = $('#countryFilter');
+                if (countryFilter.find('option').length > 1) return; // Already populated
+                
+                const countries = new Set();
+                data.forEach(university => {
+                    // In a real app, university.Country would come from your database
+                    if (university.Country) {
+                        countries.add(university.Country);
+                    }
+                });
+                
+                const sortedCountries = Array.from(countries).sort();
+                sortedCountries.forEach(country => {
+                    countryFilter.append(`<option value="${country}">${country}</option>`);
+                });
+            }
+            
+            // Debounce function to limit how often fetchRankings is called during typing
+            function debounce(func, wait) {
+                let timeout;
+                return function() {
+                    const context = this, args = arguments;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(function() {
+                        func.apply(context, args);
+                    }, wait);
+                };
+            }
+            
+   
+            function applyFilters(data, filters) {
+                let filtered = [...data];
+                
+                // Apply search filter
+                if (filters.search) {
+                    const searchTerm = filters.search.toLowerCase();
+                    filtered = filtered.filter(u => 
+                        u.Name.toLowerCase().includes(searchTerm)
+                    );
+                }
+                
+
+                if (filters.rankRange !== 'all') {
+                    switch(filters.rankRange) {
+                        case 'top10':
+                            filtered = filtered.slice(0, 10);
+                            break;
+                        case 'top50':
+                            filtered = filtered.slice(0, 50);
+                            break;
+                        case 'top100':
+                            filtered = filtered.slice(0, 100);
+                            break;
+                        case '101-200':
+                            filtered = filtered.slice(100, 200);
+                            break;
+                        case '201-500':
+                            filtered = filtered.slice(200, 500);
+                            break;
+                        case '501+':
+                            filtered = filtered.slice(500);
+                            break;
+                    }
+                }
+                
+ 
+                if (filters.country !== 'all') {
+                    filtered = filtered.filter(u => u.Country === filters.country);
+                }
+                
+                // Apply ranking system filters
+                if (!filters.includeQS) {
+                    filtered = filtered.map(u => {
+                        const copy = {...u};
+                        copy.Avg_QS_Rank = null;
+                        copy.Combined_Score = (1000 + (copy.Avg_USNews_Rank || 1000)) / 2;
+                        return copy;
+                    });
+                }
+                
+                if (!filters.includeUSNews) {
+                    filtered = filtered.map(u => {
+                        const copy = {...u};
+                        copy.Avg_USNews_Rank = null;
+                        copy.Combined_Score = ((copy.Avg_QS_Rank || 1000) + 1000) / 2;
+                        return copy;
+                    });
+                }
+                
+                filtered.sort((a, b) => {
+                    let compareValue;
+                    
+                    switch(filters.sortBy) {
+                        case 'qs':
+                            compareValue = (a.Avg_QS_Rank || 1000) - (b.Avg_QS_Rank || 1000);
+                            break;
+                        case 'usnews':
+                            compareValue = (a.Avg_USNews_Rank || 1000) - (b.Avg_USNews_Rank || 1000);
+                            break;
+                        case 'name':
+                            compareValue = a.Name.localeCompare(b.Name);
+                            break;
+                        default: // combined
+                            compareValue = a.Combined_Score - b.Combined_Score;
+                    }
+                    
+                    return filters.sortOrder === 'asc' ? compareValue : -compareValue;
+                });
+                
+                return filtered;
+            }
+            
+            function getMockData() {
+                return [
+                    {
+                        School_id: 1,
+                        Name: "Massachusetts Institute of Technology (MIT)",
+                        Country: "United States",
+                        Avg_QS_Rank: 1,
+                        Avg_USNews_Rank: 2,
+                        Combined_Score: 1.5
+                    },
+                    {
+                        School_id: 2,
+                        Name: "Stanford University",
+                        Country: "United States",
+                        Avg_QS_Rank: 2,
+                        Avg_USNews_Rank: 3,
+                        Combined_Score: 2.5
+                    },
+                    {
+                        School_id: 3,
+                        Name: "Harvard University",
+                        Country: "United States",
+                        Avg_QS_Rank: 3,
+                        Avg_USNews_Rank: 1,
+                        Combined_Score: 2.0
+                    },
+                    {
+                        School_id: 4,
+                        Name: "University of Oxford",
+                        Country: "United Kingdom",
+                        Avg_QS_Rank: 4,
+                        Avg_USNews_Rank: 5,
+                        Combined_Score: 4.5
+                    },
+                    {
+                        School_id: 5,
+                        Name: "ETH Zurich",
+                        Country: "Switzerland",
+                        Avg_QS_Rank: 7,
+                        Avg_USNews_Rank: 26,
+                        Combined_Score: 16.5
+                    },
+                    {
+                        School_id: 6,
+                        Name: "University of Cambridge",
+                        Country: "United Kingdom",
+                        Avg_QS_Rank: 5,
+                        Avg_USNews_Rank: 8,
+                        Combined_Score: 6.5
+                    },
+                    {
+                        School_id: 7,
+                        Name: "Imperial College London",
+                        Country: "United Kingdom",
+                        Avg_QS_Rank: 6,
+                        Avg_USNews_Rank: 20,
+                        Combined_Score: 13.0
+                    },
+                    {
+                        School_id: 8,
+                        Name: "University of Chicago",
+                        Country: "United States",
+                        Avg_QS_Rank: 10,
+                        Avg_USNews_Rank: 15,
+                        Combined_Score: 12.5
+                    },
+                    {
+                        School_id: 9,
+                        Name: "National University of Singapore",
+                        Country: "Singapore",
+                        Avg_QS_Rank: 11,
+                        Avg_USNews_Rank: 29,
+                        Combined_Score: 20.0
+                    },
+                    {
+                        School_id: 10,
+                        Name: "Peking University",
+                        Country: "China",
+                        Avg_QS_Rank: 18,
+                        Avg_USNews_Rank: 51,
+                        Combined_Score: 34.5
+                    }
+                    // More universities would be added in a real application
+                ];
+            }
+        });
+        
+
+        function showUniversityDetails(schoolId) {
+            const mockDetails = {
+                1: {
+                    name: "Massachusetts Institute of Technology (MIT)",
+                    country: "United States",
+                    qsRank: 1,
+                    usNewsRank: 2,
+                    description: "MIT is a private research university in Cambridge, Massachusetts, known for its programs in engineering and physical sciences.",
+                    website: "https://web.mit.edu"
+                },
+            };
+            
+            const details = mockDetails[schoolId] || {
+                name: "University Details",
+                country: "N/A",
+                qsRank: "N/A",
+                usNewsRank: "N/A",
+                description: "Details not available for this university.",
+                website: "#"
+            };
+            
+            const modalHtml = `
+                <h4>${details.name}</h4>
+                <p><strong>Country:</strong> ${details.country}</p>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">QS Ranking</h5>
+                                <p class="display-6">${details.qsRank}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">US News Ranking</h5>
+                                <p class="display-6">${details.usNewsRank}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>${details.description}</p>
+                <a href="${details.website}" target="_blank" class="btn btn-primary">Visit Website</a>
+            `;
+            
+            $('#universityDetails').html(modalHtml);
+            $('#universityModal').modal('show');
+        }
+    </script>
+</body>
+</html>
